@@ -1,0 +1,39 @@
+name: GitGoogleContainer
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # - uses: actions/checkout@v2
+      - name: Login in Docker Registry
+        uses: docker/login-action@v2.2.0
+        with:
+          registry: registry.cn-hangzhou.aliyuncs.com
+          username: l240250076
+          password: Aisino@2024
+      - name: Docker pull and push
+        run: |
+          docker pull registry.k8s.io/kube-apiserver:v1.30.3
+          docker pull registry.k8s.io/kube-controller-manager:v1.30.3
+          docker pull registry.k8s.io/kube-scheduler:v1.30.3
+          docker pull registry.k8s.io/kube-proxy:v1.30.3
+          docker pull registry.k8s.io/coredns/coredns:v1.11.1
+          docker pull registry.k8s.io/pause:3.9
+          docker pull registry.k8s.io/etcd:3.5.12-0
+          
+          docker tag registry.k8s.io/kube-apiserver:v1.30.3 registry.cn-hangzhou.aliyuncs.com/liutianji/kube-apiserver:v1.30.3
+          docker tag registry.k8s.io/kube-controller-manager:v1.30.3 registry.cn-hangzhou.aliyuncs.com/liutianji/kube-controller-manager:v1.30.3
+          docker tag registry.k8s.io/kube-scheduler:v1.30.3 registry.cn-hangzhou.aliyuncs.com/liutianji/kube-scheduler:v1.30.3
+          docker tag registry.k8s.io/kube-proxy:v1.30.3 registry.cn-hangzhou.aliyuncs.com/liutianji/kube-proxy:v1.30.3
+          docker tag registry.k8s.io/coredns/coredns:v1.11.1 registry.cn-hangzhou.aliyuncs.com/liutianji/coredns:v1.11.1
+          docker tag registry.k8s.io/pause:3.9 registry.cn-hangzhou.aliyuncs.com/liutianji/pause:3.9
+          docker tag registry.k8s.io/etcd:3.5.12-0 registry.cn-hangzhou.aliyuncs.com/liutianji/etcd:3.5.12-0
+      
+          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/kube-apiserver:v1.30.3
+          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/kube-controller-manager:v1.30.3
+          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/kube-scheduler:v1.30.3
+          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/kube-proxy:v1.30.3
+          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/coredns:v1.11.1
+          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/pause:3.9
+          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/etcd:3.5.12-0
