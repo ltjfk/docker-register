@@ -14,8 +14,8 @@ jobs:
           password: Aisino@2024
       - name: Docker pull and push
         run: |
-          docker pull eipwork/nfs-subdir-external-provisioner:v4.0.2
+          docker pull nacos/nacos-server:v2.4.1
           
-          docker tag eipwork/nfs-subdir-external-provisioner:v4.0.2 registry.cn-hangzhou.aliyuncs.com/liutianji/nfs-subdir-external-provisioner:v4.0.2
+          docker tag nacos/nacos-server:v2.4.1 registry.cn-hangzhou.aliyuncs.com/liutianji/nacos-server:v2.4.1
           
-          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/nfs-subdir-external-provisioner:v4.0.2
+          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/nacos-server:v2.4.1
