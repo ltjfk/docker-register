@@ -14,8 +14,8 @@ jobs:
           password: Aisino@2024
       - name: Docker pull and push
         run: |
-          docker pull nacos/nacos-server:v2.4.1
+          docker pull python:2.7
           
-          docker tag nacos/nacos-server:v2.4.1 registry.cn-hangzhou.aliyuncs.com/liutianji/nacos-server:v2.4.1
+          docker tag python:2.7 registry.cn-hangzhou.aliyuncs.com/liutianji/python:2.7
           
-          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/nacos-server:v2.4.1
+          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/python:2.7
