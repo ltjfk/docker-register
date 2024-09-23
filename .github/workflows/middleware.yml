@@ -14,8 +14,14 @@ jobs:
           password: Aisino@2024
       - name: Docker pull and push
         run: |
-          docker pull python:2.7
+          docker pull  quay.io/calico/node:v3.24.5
+          docker pull  k8s.gcr.io/kube-proxy:v1.26.4
+          docker pull  k8s.gcr.io/dns/k8s-dns-node-cache:1.22.18
           
-          docker tag python:2.7 registry.cn-hangzhou.aliyuncs.com/liutianji/python:2.7
-          
-          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/python:2.7
+          docker tag quay.io/calico/node:v3.24.5 registry.cn-hangzhou.aliyuncs.com/liutianji/node:v3.24.5
+          docker tag k8s.gcr.io/kube-proxy:v1.26.4 registry.cn-hangzhou.aliyuncs.com/liutianji/kube-proxy:v1.26.4
+          docker tag k8s.gcr.io/dns/k8s-dns-node-cache:1.22.18 registry.cn-hangzhou.aliyuncs.com/liutianji/k8s-dns-node-cache:1.22.18
+
+          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/node:v3.24.5
+          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/kube-proxy:v1.26.4
+          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/k8s-dns-node-cache:1.22.18
