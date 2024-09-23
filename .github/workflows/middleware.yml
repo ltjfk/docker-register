@@ -20,14 +20,14 @@ jobs:
           docker pull  docker.io/mirantis/k8s-netchecker-agent:v1.2.2
           docker pull  swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/node-exporter:v1.2.2
           
-          docker tag quay.io/calico/node:v3.24.5 registry.cn-hangzhou.aliyuncs.com/liutianji/node:v3.24.5
-          docker tag k8s.gcr.io/kube-proxy:v1.26.4 registry.cn-hangzhou.aliyuncs.com/liutianji/kube-proxy:v1.26.4
-          docker tag k8s.gcr.io/dns/k8s-dns-node-cache:1.22.18 registry.cn-hangzhou.aliyuncs.com/liutianji/k8s-dns-node-cache:1.22.18
-          docker tag docker.io/mirantis/k8s-netchecker-agent:v1.2.2 registry.cn-hangzhou.aliyuncs.com/liutianji/k8s-netchecker-agent:v1.2.2
-          docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/node-exporter:v1.2.2  registry.cn-hangzhou.aliyuncs.com/liutianji/node-exporter:v1.2.2
+          docker tag quay.io/calico/node:v3.24.5 registry.cn-hangzhou.aliyuncs.com/opennamespace/node:v3.24.5
+          docker tag k8s.gcr.io/kube-proxy:v1.26.4 registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-proxy:v1.26.4
+          docker tag k8s.gcr.io/dns/k8s-dns-node-cache:1.22.18 registry.cn-hangzhou.aliyuncs.com/opennamespace/k8s-dns-node-cache:1.22.18
+          docker tag docker.io/mirantis/k8s-netchecker-agent:v1.2.2 registry.cn-hangzhou.aliyuncs.com/opennamespace/k8s-netchecker-agent:v1.2.2
+          docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/node-exporter:v1.2.2  registry.cn-hangzhou.aliyuncs.com/opennamespace/node-exporter:v1.2.2
           
-          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/node:v3.24.5
-          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/kube-proxy:v1.26.4
-          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/k8s-dns-node-cache:1.22.18
-          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/k8s-netchecker-agent:v1.2.2
-          docker push registry.cn-hangzhou.aliyuncs.com/liutianji/node-exporter:v1.2.2
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/node:v3.24.5
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-proxy:v1.26.4
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/k8s-dns-node-cache:1.22.18
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/k8s-netchecker-agent:v1.2.2
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/node-exporter:v1.2.2
