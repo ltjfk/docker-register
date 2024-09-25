@@ -42,7 +42,7 @@ jobs:
           #docker tag k8s.gcr.io/dns/k8s-dns-node-cache:1.22.18 registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/k8s-dns-node-cache:1.22.18
           #docker tag docker.io/mirantis/k8s-netchecker-agent:v1.2.2 registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/k8s-netchecker-agent:v1.2.2
           #docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/node-exporter:v1.2.2  registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/node-exporter:v1.2.2
-          docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/metrics-server:v0.5.0 registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/kuboard-dependency/metrics-server:v0.5.0
+          docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/metrics-server:v0.5.0 registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/metrics-server:v0.5.0
   
       
           #docker push registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/kube-apiserver:v1.30.3
@@ -58,6 +58,6 @@ jobs:
           #docker push registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/k8s-dns-node-cache:1.22.18
           #docker push registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/k8s-netchecker-agent:v1.2.2
           #docker push registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/node-exporter:v1.2.2
-          docker push registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/kuboard-dependency/metrics-server:v0.5.0
+          docker push registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/metrics-server:v0.5.0
           
       
