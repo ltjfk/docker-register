@@ -15,10 +15,10 @@ jobs:
       - name: Docker pull and push
         run: |
 
-          docker pull swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/metrics-server:v0.6.2
+          docker pull starrocks.docker.scarf.sh/starrocks/allin1-ubuntu:latest
 
-          docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/metrics-server:v0.6.2 registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/metrics-server:v0.6.2
+          docker tag starrocks.docker.scarf.sh/starrocks/allin1-ubuntu:latest registry.cn-hangzhou.aliyuncs.com/opennamespace/starrocks:latest
 
-          docker push registry.cn-hangzhou.aliyuncs.com/k8s-namespaces/metrics-server:v0.6.2
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/starrocks:latest
           
       
