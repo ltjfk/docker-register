@@ -15,11 +15,10 @@ jobs:
       - name: Docker pull and push
         run: |
 
-          docker pull elasticsearch:7.17.5
+          docker pull apache/rocketmq:5.3.1
 
+          docker tag apache/rocketmq:5.3.1 registry.cn-hangzhou.aliyuncs.com/opennamespace/rocketmq:5.3.1
 
-          docker tag elasticsearch:7.17.5 registry.cn-hangzhou.aliyuncs.com/opennamespace/elasticsearch:7.17.5
-
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/elasticsearch:7.17.5
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/rocketmq:5.3.1
 
       
