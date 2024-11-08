@@ -15,10 +15,10 @@ jobs:
       - name: Docker pull and push
         run: |
 
-          docker pull elasticsearch:8.6.0
+          docker pull flannelcni/flannel-cni-plugin:v1.2.0-arm64
 
-          docker tag elasticsearch:8.6.0 registry.cn-hangzhou.aliyuncs.com/opennamespace/elasticsearch:8.6.0
+          docker tag flannelcni/flannel-cni-plugin:v1.2.0-arm64 registry.cn-hangzhou.aliyuncs.com/opennamespace/flannel-cni-plugin:v1.2.0-arm64
 
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/elasticsearch:8.6.0
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/flannel-cni-plugin:v1.2.0-arm64
 
       
