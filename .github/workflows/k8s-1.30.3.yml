@@ -15,10 +15,9 @@ jobs:
       - name: Docker pull and push
         run: |
 
-          docker pull swr.cn-east-2.myhuaweicloud.com/kuboard/kuboard-pv-browser:v3.0.1
+          docker pull swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/metrics-server:v0.5.0
 
-          docker tag swr.cn-east-2.myhuaweicloud.com/kuboard/kuboard-pv-browser:v3.0.1 registry.cn-hangzhou.aliyuncs.com/opennamespace/kuboard-pv-browser:v3.0.1
-
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kuboard-pv-browser:v3.0.1
+          docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/metrics-server:v0.5.0 registry.cn-hangzhou.aliyuncs.com/opennamespace/metrics-server:v0.5.0
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/metrics-server:v0.5.0
 
       
