@@ -26,6 +26,7 @@ jobs:
           docker pull swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/k8s-prometheus-adapter:v0.9.0
           docker pull swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/system-monitor-config-web:v3.1.6
           docker pull swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/prometheus-webhook-dingtalk:v2.1.0
+          docker pull swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/prometheus-operator:v0.49.0
 
           docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/prometheus-config-reloader:v0.49.0  registry.cn-hangzhou.aliyuncs.com/opennamespace/prometheus-config-reloader:v0.49.0
           docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/kube-rbac-proxy:v0.11.0  registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-rbac-proxy:v0.11.0
@@ -39,6 +40,7 @@ jobs:
           docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/k8s-prometheus-adapter:v0.9.0  registry.cn-hangzhou.aliyuncs.com/opennamespace/k8s-prometheus-adapter:v0.9.0
           docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/system-monitor-config-web:v3.1.6  registry.cn-hangzhou.aliyuncs.com/opennamespace/system-monitor-config-web:v3.1.6
           docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/prometheus-webhook-dingtalk:v2.1.0  registry.cn-hangzhou.aliyuncs.com/opennamespace/prometheus-webhook-dingtalk:v2.1.0
+          docker tag swr.cn-east-2.myhuaweicloud.com/kuboard-dependency/prometheus-operator:v0.49.0  registry.cn-hangzhou.aliyuncs.com/opennamespace/prometheus-operator:v0.49.0
           
           docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/prometheus-config-reloader:v0.49.0
           docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-rbac-proxy:v0.11.0
@@ -52,5 +54,6 @@ jobs:
           docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/k8s-prometheus-adapter:v0.9.0
           docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/system-monitor-config-web:v3.1.6
           docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/prometheus-webhook-dingtalk:v2.1.0
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/prometheus-operator:v0.49.0
 
       
