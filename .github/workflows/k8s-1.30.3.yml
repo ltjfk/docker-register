@@ -15,10 +15,10 @@ jobs:
       - name: Docker pull and push
         run: |
 
-          docker pull flannelcni/flannel:v0.20.1-arm64
+          docker pull swr.cn-east-2.myhuaweicloud.com/kuboard/kuboard-pv-browser:v3.0.1
 
-          docker tag flannelcni/flannel:v0.20.1-arm64 registry.cn-hangzhou.aliyuncs.com/opennamespace/flannel:v0.20.1-arm64
+          docker tag swr.cn-east-2.myhuaweicloud.com/kuboard/kuboard-pv-browser:v3.0.1 registry.cn-hangzhou.aliyuncs.com/opennamespace/kuboard-pv-browser:v3.0.1
 
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/flannel:v0.20.1-arm64
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kuboard-pv-browser:v3.0.1
 
       
