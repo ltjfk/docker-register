@@ -14,11 +14,11 @@ jobs:
           password: Aisino@2024
       - name: Docker pull and push
         run: |
-          docker pull nginx:1.26.2
+          docker pull mysql:5.7.44
 
-          docker tag nginx:1.26.2  registry.cn-hangzhou.aliyuncs.com/opennamespace/nginx:1.26.2
+          docker tag mysql:5.7.44  registry.cn-hangzhou.aliyuncs.com/opennamespace/mysql:5.7.44
           
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/nginx:1.26.2
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/mysql:5.7.44
 
 
       
