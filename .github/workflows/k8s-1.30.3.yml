@@ -14,11 +14,11 @@ jobs:
           password: Aisino@2024
       - name: Docker pull and push
         run: |
-          docker pull postgres:12.13
+          docker pull postgis/postgis:12-3.2
 
-          docker tag postgres:12.13  registry.cn-hangzhou.aliyuncs.com/opennamespace/postgres:12.13
+          docker tag postgis/postgis:12-3.2  registry.cn-hangzhou.aliyuncs.com/opennamespace/postgis:12-3.2
           
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/postgres:12.13
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/postgis:12-3.2
 
 
       
