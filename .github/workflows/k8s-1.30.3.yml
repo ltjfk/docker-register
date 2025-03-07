@@ -14,11 +14,12 @@ jobs:
           password: Aisino@2024
       - name: Docker pull and push
         run: |
-          docker pull postgis/postgis:12-3.3
+        
+          docker pull vesoft/nebula-graph-studio:v3.10.0
 
-          docker tag postgis/postgis:12-3.3  registry.cn-hangzhou.aliyuncs.com/opennamespace/postgis:12-3.3
+          docker tag vesoft/nebula-graph-studio:v3.10.0  registry.cn-hangzhou.aliyuncs.com/opennamespace/nebula-graph-studio:v3.10.0
           
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/postgis:12-3.3
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/nebula-graph-studio:v3.10.0
 
 
       
