@@ -15,11 +15,20 @@ jobs:
       - name: Docker pull and push
         run: |
         
-          docker pull vesoft/nebula-graph-studio:v3.10.0
+          docker pull docker.io/calico/node:v3.24.1
+          docker pull docker.io/calico/cni:v3.24.1
+          docker pull docker.io/calico/pod2daemon-flexvol:v3.24.1
+          docker pull docker.io/calico/kube-controllers:v3.24.1
 
-          docker tag vesoft/nebula-graph-studio:v3.10.0  registry.cn-hangzhou.aliyuncs.com/opennamespace/nebula-graph-studio:v3.10.0
+          docker tag docker.io/calico/node:v3.24.1  registry.cn-hangzhou.aliyuncs.com/opennamespace/node:v3.24.1
+          docker tag docker.io/calico/cni:v3.24.1  registry.cn-hangzhou.aliyuncs.com/opennamespace/cni:v3.24.1
+          docker tag docker.io/calico/pod2daemon-flexvol:v3.24.1  registry.cn-hangzhou.aliyuncs.com/opennamespace/pod2daemon-flexvol:v3.24.1
+          docker tag docker.io/calico/kube-controllers:v3.24.1  registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-controllers:v3.24.1 
+
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/node:v3.24.1
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/cni:v3.24.1
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/pod2daemon-flexvol:v3.24.1
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-controllers:v3.24.1 
           
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/nebula-graph-studio:v3.10.0
-
 
       
