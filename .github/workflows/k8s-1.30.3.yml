@@ -14,15 +14,17 @@ jobs:
           password: Aisino@2024
       - name: Docker pull and push
         run: |
-          docker pull registry.k8s.io/kube-proxy:v1.32.0
-          docker pull registry.k8s.io/coredns/coredns:v1.11.3
+          docker pull docker.io/calico/cni:v3.29.2
+          docker pull docker.io/calico/node:v3.29.2
+          docker pull docker.io/calico/kube-controllers:v3.29.2
 
-          docker tag registry.k8s.io/kube-proxy:v1.32.0   registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-proxy:v1.32.0
-          docker tag registry.k8s.io/coredns/coredns:v1.11.3   registry.cn-hangzhou.aliyuncs.com/opennamespace/coredns:v1.11.3
+          docker tag docker.io/calico/cni:v3.29.2   registry.cn-hangzhou.aliyuncs.com/opennamespace/cni:v3.29.2
+          docker tag docker.io/calico/node:v3.29.2   registry.cn-hangzhou.aliyuncs.com/opennamespace/node:v3.29.2
+          docker tag docker.io/calico/kube-controllers:v3.29.2   registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-controllers:v3.29.2
           
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-proxy:v1.32.0
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/coredns:v1.11.3
-
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/cni:v3.29.2
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/node:v3.29.2
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-controllers:v3.29.2
           
 
       
