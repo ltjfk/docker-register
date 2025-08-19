@@ -14,17 +14,11 @@ jobs:
           password: Aisino@2024
       - name: Docker pull and push
         run: |
-          docker pull docker.io/calico/cni:v3.29.2
-          docker pull docker.io/calico/node:v3.29.2
-          docker pull docker.io/calico/kube-controllers:v3.29.2
+          docker pull gethue/hue:4.8.0
 
-          docker tag docker.io/calico/cni:v3.29.2   registry.cn-hangzhou.aliyuncs.com/opennamespace/cni:v3.29.2
-          docker tag docker.io/calico/node:v3.29.2   registry.cn-hangzhou.aliyuncs.com/opennamespace/node:v3.29.2
-          docker tag docker.io/calico/kube-controllers:v3.29.2   registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-controllers:v3.29.2
+          docker tag gethue/hue:4.8.0   registry.cn-hangzhou.aliyuncs.com/opennamespace/hue:4.8.0
           
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/cni:v3.29.2
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/node:v3.29.2
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-controllers:v3.29.2
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/hue:4.8.0
           
 
       
