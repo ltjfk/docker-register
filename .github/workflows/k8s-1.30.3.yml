@@ -14,11 +14,11 @@ jobs:
           password: Aisino@2024
       - name: Docker pull and push
         run: |
-          docker pull xzxxn777/ddddocr@sha256:c8f8a98d737efce942e5daaad19a7b1bc7059b192a8bfd460254d03c056e3a26
+          docker pull xzxxn777/ddddocr@sha256:a7187318dd2a74874a7cdc3fd589b89bd5767b321c543af508af839836a4725a
 
-          docker tag xzxxn777/ddddocr@sha256:c8f8a98d737efce942e5daaad19a7b1bc7059b192a8bfd460254d03c056e3a26   registry.cn-hangzhou.aliyuncs.com/opennamespace/ddddocr:arm
+          docker tag xzxxn777/ddddocr@sha256:a7187318dd2a74874a7cdc3fd589b89bd5767b321c543af508af839836a4725a   registry.cn-hangzhou.aliyuncs.com/opennamespace/ddddocr:amd
           
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/ddddocr:arm
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/ddddocr:amd
           
 
       
