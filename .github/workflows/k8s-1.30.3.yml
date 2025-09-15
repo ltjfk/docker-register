@@ -14,11 +14,11 @@ jobs:
           password: Aisino@2024
       - name: Docker pull and push
         run: |
-          docker pull xzxxn777/ddddocr@sha256:a7187318dd2a74874a7cdc3fd589b89bd5767b321c543af508af839836a4725a
+          docker pull  mysql:8.0.43
 
-          docker tag xzxxn777/ddddocr@sha256:a7187318dd2a74874a7cdc3fd589b89bd5767b321c543af508af839836a4725a   registry.cn-hangzhou.aliyuncs.com/opennamespace/ddddocr:amd
+          docker tag mysql:8.0.43   registry.cn-hangzhou.aliyuncs.com/opennamespace/mysql:8.0.43
           
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/ddddocr:amd
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/mysql:8.0.43
           
 
       
