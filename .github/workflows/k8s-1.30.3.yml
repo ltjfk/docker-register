@@ -16,7 +16,7 @@ jobs:
         run: |
           docker pull kubesphere/kube-apiserver:v1.30.14@sha256:54f42b14e6c8ba0902c9bedb0ec8f9a2b6ee02f9c50723b137473e2ae64fe2dd
 
-          docker tag kubesphere/kube-apiserver:v1.30.14   registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-apiserver:v1.30.14
+          docker tag kubesphere/kube-apiserver:v1.30.14@sha256:54f42b14e6c8ba0902c9bedb0ec8f9a2b6ee02f9c50723b137473e2ae64fe2dd   registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-apiserver:v1.30.14
           
           docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-apiserver:v1.30.14
           
