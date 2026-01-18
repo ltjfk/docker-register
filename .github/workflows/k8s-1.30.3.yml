@@ -14,11 +14,11 @@ jobs:
           password: Aisino@2024
       - name: Docker pull and push
         run: |
-          docker pull docker.elastic.co/kibana/kibana:7.12.1
+          docker pull kubesphere/kube-apiserver:v1.30.14@sha256:be079fe85d6b6804b89ab4fdd6a35cd56341e99ea809881cfe37962f440dc1be
 
-          docker tag docker.elastic.co/kibana/kibana:7.12.1   registry.cn-hangzhou.aliyuncs.com/opennamespace/kibana:7.12.1
+          docker tag kubesphere/kube-apiserver:v1.30.14   registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-apiserver:v1.30.14
           
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kibana:7.12.1
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-apiserver:v1.30.14
           
 
       
