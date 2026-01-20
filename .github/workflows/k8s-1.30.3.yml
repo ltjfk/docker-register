@@ -15,11 +15,15 @@ jobs:
       - name: Docker pull and push
         run: |
 
-          docker pull --platform linux/arm64 registry.k8s.io/pause:3.10.1
+          docker pull --platform linux/arm64 ghcr.io/flannel-io/flannel-cni-plugin:v1.8.0-flannel1
+          docker pull --platform linux/arm64 ghcr.io/flannel-io/flannel:v0.27.4
 
-          docker tag registry.k8s.io/pause:3.10.1 registry.cn-hangzhou.aliyuncs.com/opennamespace/pause:3.10.1
+          docker tag ghcr.io/flannel-io/flannel-cni-plugin:v1.8.0-flannel1 registry.cn-hangzhou.aliyuncs.com/opennamespace/flannel-cni-plugin:v1.8.0-flannel1
+          docker tag ghcr.io/flannel-io/flannel:v0.27.4 registry.cn-hangzhou.aliyuncs.com/opennamespace/flannel:v0.27.4
 
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/pause:3.10.1
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/flannel-cni-plugin:v1.8.0-flannel1
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/flannel:v0.27.4
+
 
           
 
