@@ -14,11 +14,29 @@ jobs:
           password: Aisino@2024
       - name: Docker pull and push
         run: |
-          docker pull kubesphere/kube-apiserver:v1.30.14@sha256:54f42b14e6c8ba0902c9bedb0ec8f9a2b6ee02f9c50723b137473e2ae64fe2dd
-
-          docker tag kubesphere/kube-apiserver:v1.30.14@sha256:54f42b14e6c8ba0902c9bedb0ec8f9a2b6ee02f9c50723b137473e2ae64fe2dd   registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-apiserver:v1.30.14
+          docker pull --platform linux/arm64 registry.k8s.io/kube-apiserver:v1.32.2
+          docker pull --platform linux/arm64 registry.k8s.io/kube-controller-manager:v1.32.2
+          docker pull --platform linux/arm64 registry.k8s.io/kube-scheduler:v1.32.2
+          docker pull --platform linux/arm64 registry.k8s.io/kube-proxy:v1.32.2
+          docker pull --platform linux/arm64 registry.k8s.io/coredns/coredns:v1.11.3
+          docker pull --platform linux/arm64 registry.k8s.io/pause:3.10
+          docker pull --platform linux/arm64 registry.k8s.io/etcd:3.5.16-0
           
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-apiserver:v1.30.14
+          docker tag registry.k8s.io/kube-apiserver:v1.32.2 registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-apiserver:v1.32.2
+          docker tag registry.k8s.io/kube-controller-manager:v1.32.2 registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-controller-manager:v1.32.2
+          docker tag registry.k8s.io/kube-scheduler:v1.32.2 registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-scheduler:v1.32.2
+          docker tag registry.k8s.io/kube-proxy:v1.32.2 registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-proxy:v1.32.2
+          docker tag registry.k8s.io/coredns/coredns:v1.11.3 registry.cn-hangzhou.aliyuncs.com/opennamespace/coredns:v1.11.3
+          docker tag registry.k8s.io/pause:3.10 registry.cn-hangzhou.aliyuncs.com/opennamespace/pause:3.10
+          docker tag registry.k8s.io/etcd:3.5.16-0 registry.cn-hangzhou.aliyuncs.com/opennamespace/etcd:3.5.16-0
+          
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-apiserver:v1.32.2
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-controller-manager:v1.32.2
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-scheduler:v1.32.2
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kube-proxy:v1.32.2
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/coredns:v1.11.3
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/pause:3.10
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/etcd:3.5.16-0
           
 
       
