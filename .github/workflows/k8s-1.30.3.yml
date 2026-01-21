@@ -15,11 +15,11 @@ jobs:
       - name: Docker pull and push
         run: |
 
-          docker pull --platform linux/arm64 eipwork/kuboard:v3
+          docker pull --platform linux/arm64 eipwork/kuboard-agent:v3
 
-          docker tag eipwork/kuboard:v3 registry.cn-hangzhou.aliyuncs.com/opennamespace/kuboard:v3-arm
+          docker tag eipwork/kuboard:v3 registry.cn-hangzhou.aliyuncs.com/opennamespace/kuboard-agent:v3-arm
 
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kuboard:v3-arm
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kuboard-agent:v3-arm
 
 
 
