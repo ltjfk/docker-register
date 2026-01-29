@@ -19,13 +19,13 @@ jobs:
 
           docker pull dock.mau.dev/mautrix/wechat:latest
 
-          docker tag matrixdotorg/synapse:latest registry.cn-hangzhou.aliyuncs.com/opennamespace/matrixdotorg/synapse:latest
+          docker tag matrixdotorg/synapse:latest registry.cn-hangzhou.aliyuncs.com/opennamespace/synapse:latest
 
-          docker tag dock.mau.dev/mautrix/wechat:latest registry.cn-hangzhou.aliyuncs.com/opennamespace/dock.mau.dev/mautrix/wechat:latest
+          docker tag dock.mau.dev/mautrix/wechat:latest registry.cn-hangzhou.aliyuncs.com/opennamespace/wechat:latest
 
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/matrixdotorg/synapse:latest
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/synapse:latest
 
-          docker push  registry.cn-hangzhou.aliyuncs.com/opennamespace/dock.mau.dev/mautrix/wechat:latest
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/wechat:latest
 
 
 
