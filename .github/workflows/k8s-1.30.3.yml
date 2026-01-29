@@ -15,11 +15,17 @@ jobs:
       - name: Docker pull and push
         run: |
 
-          docker pull --platform linux/arm64 eipwork/kuboard-agent:v3
+          docker pull matrixdotorg/synapse:latest
 
-          docker tag eipwork/kuboard-agent:v3 registry.cn-hangzhou.aliyuncs.com/opennamespace/kuboard-agent:v3-arm
+          docker pull dock.mau.dev/mautrix/wechat:latest
 
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/kuboard-agent:v3-arm
+          docker tag matrixdotorg/synapse:latest registry.cn-hangzhou.aliyuncs.com/opennamespace/matrixdotorg/synapse:latest
+
+          docker tag dock.mau.dev/mautrix/wechat:latest registry.cn-hangzhou.aliyuncs.com/opennamespace/dock.mau.dev/mautrix/wechat:latest
+
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/matrixdotorg/synapse:latest
+
+          docker push  registry.cn-hangzhou.aliyuncs.com/opennamespace/dock.mau.dev/mautrix/wechat:latest
 
 
 
