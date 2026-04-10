@@ -15,17 +15,11 @@ jobs:
       - name: Docker pull and push
         run: |
 
-          docker pull matrixdotorg/synapse:latest
+          docker pull arm64v8/redis:5.0.14
 
-          docker pull dock.mau.dev/mautrix/wechat:latest
+          docker tag arm64v8/redis:5.0.14 registry.cn-hangzhou.aliyuncs.com/opennamespace/redis:5.0.14-arm
 
-          docker tag matrixdotorg/synapse:latest registry.cn-hangzhou.aliyuncs.com/opennamespace/synapse:latest
-
-          docker tag dock.mau.dev/mautrix/wechat:latest registry.cn-hangzhou.aliyuncs.com/opennamespace/wechat:latest
-
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/synapse:latest
-
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/wechat:latest
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/redis:5.0.14-arm
 
 
 
