@@ -15,11 +15,11 @@ jobs:
       - name: Docker pull and push
         run: |
 
-          docker pull arm64v8/redis:5.0.14
+          docker pull --platform linux/arm64 nacos/nacos-server:v2.5.1
 
-          docker tag arm64v8/redis:5.0.14 registry.cn-hangzhou.aliyuncs.com/opennamespace/redis:5.0.14-arm
+          docker tag nacos/nacos-server:v2.5.1 registry.cn-hangzhou.aliyuncs.com/opennamespace/nacos-server:v2.5.1-arm
 
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/redis:5.0.14-arm
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/nacos-server:v2.5.1-arm
 
 
 
