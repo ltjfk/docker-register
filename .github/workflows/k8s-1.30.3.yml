@@ -15,11 +15,14 @@ jobs:
       - name: Docker pull and push
         run: |
 
-          docker pull --platform linux/arm64 nacos/nacos-server:v2.5.1
+          #docker pull --platform linux/arm64 nacos/nacos-server:v2.5.1
+          docker pull swr.cn-north-4.myhuaweicloud.com/ddn-k8s/ghcr.io/ggml-org/llama.cpp:server
 
-          docker tag nacos/nacos-server:v2.5.1 registry.cn-hangzhou.aliyuncs.com/opennamespace/nacos-server:v2.5.1-arm
+          #docker tag nacos/nacos-server:v2.5.1 registry.cn-hangzhou.aliyuncs.com/opennamespace/nacos-server:v2.5.1-arm
+          docker tag swr.cn-north-4.myhuaweicloud.com/ddn-k8s/ghcr.io/ggml-org/llama.cpp:server registry.cn-hangzhou.aliyuncs.com/opennamespace/llama.cpp:server
 
-          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/nacos-server:v2.5.1-arm
+          #docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/nacos-server:v2.5.1-arm
+          docker push registry.cn-hangzhou.aliyuncs.com/opennamespace/llama.cpp:server
 
 
 
